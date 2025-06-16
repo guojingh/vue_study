@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>2.key的原理</title>
     <!--引入 Vue-->
     <script type="text/javascript" src="../js/vue.js"></script>
 </head>
+
 <body>
     <!--
     面试题: react、vue中的key有什么作用? (key的内部原理)
@@ -49,17 +51,18 @@
         el: '#root',
         data: {
             persons: [
-                {id:'001',name:'张三',age:18},
-                {id:'002',name:'李四',age:19},
-                {id:'003',name:'王五',age:20},
+                { id: '001', name: '张三', age: 18 },
+                { id: '002', name: '李四', age: 19 },
+                { id: '003', name: '王五', age: 20 },
             ]
         },
-        methods:{
-            add(){
-                const p = {id:'004', name:'老六', age:40}
+        methods: {
+            add() {
+                const p = { id: '004', name: '老六', age: 40 }
                 this.persons.unshift(p)
             }
         }
     })
 </script>
+
 </html>

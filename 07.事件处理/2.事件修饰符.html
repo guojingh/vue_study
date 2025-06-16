@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>事件修饰符</title>
     <!-- 引入 Vue -->
     <script type="text/javascript" src="../js/vue.js"></script>
     <style>
-        *{
+        * {
             margin-top: 20px;
         }
 
-        .demo01{
+        .demo01 {
             height: 50px;
             background-color: aqua;
         }
-        .box1{
+
+        .box1 {
             padding: 5px;
             background-color: aqua;
         }
-        .box2{
+
+        .box2 {
             padding: 5px;
             background-color: coral;
         }
-        .list{
+
+        .list {
             height: 200px;
             width: 20px;
             background-color: aquamarine;
             overflow: auto;
         }
-        li{
+
+        li {
             height: 100px;
         }
     </style>
 </head>
+
 <body>
     <!--
     Vue中的事件修饰符:
@@ -92,13 +98,14 @@
             showInfo(e) {
                 alert('同学你好！')
             },
-            showMsg(msg){
+            showMsg(msg) {
                 console.log(msg)
             },
-            demo(){
+            demo() {
                 console.log('@')
             }
         }
     })
 </script>
+
 </html>

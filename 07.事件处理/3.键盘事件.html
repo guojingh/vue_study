@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>键盘事件</title>
 
     <script type="text/javascript" src="../js/vue.js"></script>
 </head>
+
 <body>
 
     <!--
@@ -27,30 +29,31 @@
     5.Vue.config.keyCodes.自定义键名 = 键码，可以去定制按键别名
     -->
 
-<!--准备好一个容器-->
-<div id="root">
-    <h2>欢迎来到{{name}}学习</h2>
-    <input type="text" placeholder="按下回车提示输入" @keyup.huiche="showInfo">
-</div>
+    <!--准备好一个容器-->
+    <div id="root">
+        <h2>欢迎来到{{name}}学习</h2>
+        <input type="text" placeholder="按下回车提示输入" @keyup.huiche="showInfo">
+    </div>
 
-<script type="text/javascript">
-    Vue.config.productionTip = false //阻止 vue 启动是产生生产化提醒
-    Vue.config.keyCodes.huiche = 13  //定义了一个别名按键（不推荐使用）
+    <script type="text/javascript">
+        Vue.config.productionTip = false //阻止 vue 启动是产生生产化提醒
+        Vue.config.keyCodes.huiche = 13  //定义了一个别名按键（不推荐使用）
 
-    //创建Vue实例
-    new Vue({
-        el:'#root',  //el 用于指定当前Vue实例为哪个容器服务，值通常为css选择器字符串
-        data:{ //data中用于存储数据，数据供el指定的容器去使用。值我们暂时先写成一个对象
-            name:"尚硅谷"
-        },
-        methods:{
-            showInfo(e){
-                //console.log(e.keyCode)
-                //if(e.keyCode !== 13) return
-                console.log(e.target.value)
+        //创建Vue实例
+        new Vue({
+            el: '#root',  //el 用于指定当前Vue实例为哪个容器服务，值通常为css选择器字符串
+            data: { //data中用于存储数据，数据供el指定的容器去使用。值我们暂时先写成一个对象
+                name: "尚硅谷"
+            },
+            methods: {
+                showInfo(e) {
+                    //console.log(e.keyCode)
+                    //if(e.keyCode !== 13) return
+                    console.log(e.target.value)
+                }
             }
-        }
-    })
+        })
 
-</script>
+    </script>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>el与data的两种写法</title>
@@ -29,32 +30,33 @@
 <script type="text/javascript">
     Vue.config.productionTip = false //阻止 vue 启动是产生生产化提醒
 
-/*    //el 的两种写法
-    const  v = new Vue({
-        //el:'#root',  //第一种写法
-        data:{
-            name:'尚硅谷'
-        }
-    })
-    console.log(v)
-    v.$mount('#root')  //第二种写法*/
+    /*    //el 的两种写法
+        const  v = new Vue({
+            //el:'#root',  //第一种写法
+            data:{
+                name:'尚硅谷'
+            }
+        })
+        console.log(v)
+        v.$mount('#root')  //第二种写法*/
 
     //data的两种写法
     new Vue({
-        el:'#root',
+        el: '#root',
         //data的第一种写法，对象式
-/*        data:{
-            name:'尚硅谷'
-        }*/
+        /*        data:{
+                    name:'尚硅谷'
+                }*/
 
         //data的第二种写法，函数式
-        data:function () {
+        data: function () {
             //这个this是 vue 实例
             console.log('@@@', this)
-            return{
-                name:'尚硅谷'
+            return {
+                name: '尚硅谷'
             }
         }
     })
 </script>
+
 </html>
